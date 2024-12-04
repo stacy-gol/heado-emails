@@ -91,9 +91,11 @@
         font-size: 15px !important;
       }
 
-      p {
+      p,
+      .advantages,
+      .unsubscribe-link {
         font-size: 13px !important;
-        line-height: 1.6 !important;
+        line-height: 1.4 !important;
       }
     }
 
@@ -120,9 +122,9 @@
       }
 
       p,
-      div.advantages,
+      .advantages,
       .unsubscribe-link {
-        font-size: 12px !important;
+        font-size: 13px !important;
         line-height: 1.4 !important;
       }
 
@@ -163,11 +165,11 @@
         <!-- end logo section -->
 
         <!-- трекер продаж section -->
-        <table style="width: 94%; margin: 0 auto 20px;">
+        <table style="width: 94%; margin: 0 auto 20px; border-spacing: 0; box-shadow: 0px 4px 8px rgba(12, 12, 13, 0.07);">
 
           <tr>
             <td align="center"
-              style="padding: 20px; margin: 0 15px; border-radius: 12px; text-align: center; background-color: #ffffff; box-shadow: 0px 4px 8px -4px rgba(12, 12, 13, 0.07);">
+              style="padding: 20px; margin: 0 15px; border-radius: 12px; text-align: center; background-color: #ffffff; ">
               <h1 class="pc"
                 style="font-family: 'Adderley', 'Arial', 'Helvetica', sans-serif; font-size: 36px; font-weight: bold; margin: 0; color: #000;">
                 НОВАЯ SMART-ТЕХНОЛОГИЯ ДЛЯ <br> РОЗНИЦЫ - <span style="color: #FFA000;">ТРЕКЕР ПРОДАЖ</span></h1>
@@ -284,7 +286,7 @@
                     1
                   </div>
                 </td>
-                <td style="text-align: left; padding-left: 10px;">
+                <td class="advantages" style="text-align: left; padding-left: 10px; font-size: 20px;">
                   Увеличение продаж выбранной группы товаров от 50% (например, СТМ или любой другой).
                 </td>
               </tr>
@@ -295,7 +297,7 @@
                     2
                   </div>
                 </td>
-                <td style="text-align: left; padding-left: 10px;">
+                <td class="advantages" style="text-align: left; padding-left: 10px; font-size: 20px;">
                   Увеличение маржинальности продаж от 10%.
                 </td>
               </tr>
@@ -306,7 +308,7 @@
                     3
                   </div>
                 </td>
-                <td style="text-align: left; padding-left: 10px;">
+                <td class="advantages" style="text-align: left; padding-left: 10px; font-size: 20px;">
                   Поднятие мотивации персонала, формирование привычки продавать. Как следствие снижается текучка —
                   продавцы
                   выполняют планы и довольны своей работой.
@@ -319,7 +321,7 @@
                     4
                   </div>
                 </td>
-                <td style="text-align: left; padding-left: 10px;">
+                <td class="advantages" style="text-align: left; padding-left: 10px; font-size: 20px;">
                   Снятие рутины с управляющих и директоров. Трекер сфокусирует команду на наиболее эффективных целях,
                   выявит
                   сбои в работе и поможет их устранить.
@@ -332,7 +334,7 @@
                     5
                   </div>
                 </td>
-                <td style="text-align: left; padding-left: 10px;">
+                <td class="advantages" style="text-align: left; padding-left: 10px; font-size: 20px;">
                   Разбор успешных примеров продаж вашей сети. Трекер находит лучших продавцов, анализирует их успешный
                   опыт и
                   обучает остальных сотрудников приемам и фишкам, которые действительно работают.
@@ -347,8 +349,8 @@
 
         <tr>
           <td align="center" style="padding: 20px;">
-            <table width="94%" border="0" cellpadding="0" cellspacing="0"
-              style="background-color: #FFFFFF; border-radius: 10px; font-family: 'Roboto', Arial, sans-serif; color: #000; line-height: 1.5; box-shadow: 0px 4px 8px -4px rgba(12, 12, 13, 0.07);">
+            <div style="background-color: #FFFFFF; border-radius: 10px; box-shadow: 0px 4px 8px -4px rgba(12, 12, 13, 0.07); margin: 20px;">
+              <table width="100%" border="0" cellpadding="0" cellspacing="0" style="font-family: 'Roboto', Arial, sans-serif; color: #000; line-height: 1.5;">
               <tr>
                 <td align="center" style="padding: 20px;">
                   <img class="calculator"
@@ -382,6 +384,7 @@
                 </td>
               </tr>
             </table>
+            </div>
           </td>
         </tr>
         <!-- команда и CTA кнопка section -->
