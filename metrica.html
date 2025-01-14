@@ -1,0 +1,85 @@
+<!-- Form submit goal to Yandex Metrica -->
+<script type="text/javascript">
+function getClosest(el, s) {
+    var r = undefined;
+    while (el) {
+        if (el.matches(s)) {
+            r = el;
+            break;
+        } else if (el.tagName.toLowerCase() == 'body') {
+            break;
+        }
+        el = el.parentElement;
+    }
+    return r;
+}
+
+document.addEventListener('click', function(e) {
+    if (e.target.matches('div.t-form__submit > button')) {
+        var form = getClosest(e.target, 'form'),
+            name = form.querySelector('[name="Name"]').value.trim(),
+            email = form.querySelector('[name="Email"]').value.trim(),
+            phone = form.querySelector('[name="Phone"]').value.trim();
+
+        var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        var phonePattern = /^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$/;
+
+        if (name && emailPattern.test(email) && phonePattern.test(phone)) {
+            console.log('Форма заполнена корректно');
+            console.log(name, email, phone);
+            ym(94182936, 'reachGoal', 'отправка формы');
+        }
+    }
+    // https://moto.heado.ru/ page forms
+    if (window.location.href === 'https://moto.heado.ru/') {
+        if (e.target.matches('#form775630019 button')) {
+            var form = getClosest(e.target, 'form'),
+                name = form.querySelector('[name="name"]').value.trim(),
+                email = form.querySelector('[name="email"]').value.trim(),
+                phone = form.querySelector('[name="Phone"]').value.trim();
+
+            var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (name && emailPattern.test(email)) {
+                console.log('Форма СВЯЖИТЕСЬ СО МНОЙ заполнена корректно');
+                console.log(name, email, phone);
+                ym(98768665, 'reachGoal', 'motivacia');
+            }
+        }
+        if (e.target.matches('#form757170769 button')) {
+            var form = getClosest(e.target, 'form'),
+                name = form.querySelector('[name="Name"]').value.trim(),
+                email = form.querySelector('[name="Email"]').value.trim(),
+                phone = form.querySelector('[type="tel"]').value.trim();
+
+            var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            var phonePattern = /^\(\d{3}\) \d{3}-\d{2}-\d{2}$/;
+
+            if (name && emailPattern.test(email) && phonePattern.test(phone)) {
+                console.log('Форма заявки заполнена корректно');
+                console.log(name, email, phone);
+                ym(98768665, 'reachGoal', 'motivacia');
+            }
+        }
+    }
+    // https://moto.heado.ru/tracker page form
+    if (window.location.href === 'https://moto.heado.ru/tracker') {
+        if (e.target.matches('#form815974365 button')) {
+            var form = getClosest(e.target, 'form'),
+                name = form.querySelector('[name="Name"]').value.trim(),
+                email = form.querySelector('[name="Email"]').value.trim(),
+                phone = form.querySelector('[type="tel"]').value.trim();
+
+            var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            var phonePattern = /^\(\d{3}\) \d{3}-\d{2}-\d{2}$/;
+
+            if (name && emailPattern.test(email) && phonePattern.test(phone)) {
+                console.log('Форма трекера заполнена корректно');
+                console.log(name, email, phone);
+                ym(98768665,'reachGoal','tracker');
+            }
+        }
+    }
+});
+</script>
+<!-- Form submit goal to Yandex Metrica -->
