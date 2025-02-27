@@ -76,11 +76,11 @@
       }
 
       .pc {
-        display: none;
+        display: none !important;
       }
 
       .mob {
-        display: block;
+        display: block !important;
       }
 
       h1 {
@@ -102,15 +102,13 @@
         line-height: 1.4 !important;
       }
 
-      table.motivation-list tr {
-        display: block !important;
+      table tr {
         width: 100% !important;
       }
 
-      table.motivation-list td {
+      table td {
         width: 100% !important;
         display: block !important;
-        padding: 0 !important;
       }
 
       .motivation-systems {
@@ -195,57 +193,7 @@
         padding: 0 20px !important;
       }
 
-      .heado-title {
-        padding: 20px 40px 20px 20px;
-      }
-      table.motivation-list tr {
-        display: block !important;
-        width: 100% !important;
-      }
-
-      table.motivation-list td {
-        width: 100% !important;
-        display: block !important;
-        padding: 0 !important;
-      }
-
-      .motivation-systems {
-        background: #F2F2F2 !important;
-      }
-
-      .heado-title {
-        padding: 20px 40px 20px 20px !important;
-      }
-
-      .heado-row {
-        display: block !important;
-        width: 290px !important;
-        padding: 10px 30px 10px 15px !important;
-      }
-
-      .heado-item {
-        display: flex !important;
-        align-items: flex-start !important;
-        width: 100% !important;
-        padding-left: 0 !important;
-        padding-bottom: 10px !important;
-        padding-top: 0 !important;
-      }
-
-      .number {
-        min-width: 36px !important;
-        height: 36px !important;
-        margin-right: 10px !important;
-      }
-
-      .heado-text {
-        width: auto !important;
-        font-size: 14px !important;
-        margin-top: 0 !important;
-      }
-      .heado-img {
-        text-align: center !important;
-      }
+      
     }
   </style>
 </head>
@@ -254,16 +202,12 @@
   <center style="width: 100%;table-layout: fixed;background-color: #dde0e1;padding-top: 40px; padding-bottom: 40px;">
     <div style="max-width: 600px; margin: auto; background-color: #F2F2F2; box-shadow: 0 0 10px rgba(0,0,0,0.2);">
 
-      <!-- Прехедер -->
-      <div style="font-size:0;line-height: 1px;display: none;max-width:0;opacity:0;overflow:hidden;">
-        антитренды мотивации - мнение продавца
-      </div>
       <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation"
         style="background-color: #F2F2F2; color: #565656; Margin:0 auto; padding:0;max-width: 600px;width:100%; font-family: 'Roboto', Arial, sans-serif, Helvetica;">
 
         <!-- logo section -->
         <tr>
-          <td align="center" style="padding: 20px 0;" class="mobile-logo-padding">
+          <td align="center" style="padding: 20px 0 0;" class="mobile-logo-padding">
             <img src="https://res.cloudinary.com/dfeszdhhf/image/upload/v1733230073/Group_68_jhkf0w.png"
               alt="HEADO Logo" width="100" style="display: block; border: 0; max-width: 100%; height: auto;" />
           </td>
@@ -286,7 +230,7 @@
         <!-- интро про статью и кнопка section -->
         <tr>
           <td
-            style="padding: 20px 0; text-align: center; background-color: #F2F2F2; font-family: 'Roboto', Arial, sans-serif;">
+            style="padding: 0; text-align: center; background-color: #F2F2F2; font-family: 'Roboto', Arial, sans-serif;">
             <img src="https://res.cloudinary.com/dfeszdhhf/image/upload/v1736868508/2_jcpv7x.png" alt="Тренды ритейла"
               style="margin: 20px auto; width: 100%; max-width: 40px; height: auto; display: block; border: 0;" />
             <h2
@@ -368,7 +312,7 @@
                 <!-- Блок 1 -->
                 <tr>
                   <td style="width:50%; padding:10px;" valign="top">
-                    <h1>🤑</h1>
+                    <h1 style="padding-top: 10px;">🤑</h1>
                     <h2 style="margin:10px 0;">1/ Высокий оклад</h2>
                     <p style="color:#000; font-size:14px;">
                       Работа мечты! Вот тебе назначили фиксированную сумму, радуйся жизни! Но я прихожу на работу не
@@ -382,7 +326,7 @@
                   </td>
 
                   <td style="width:50%; padding:10px;" valign="top">
-                    <h1>✍️</h1>
+                    <h1 style="padding-top: 10px;">✍️</h1>
                     <h2 style="margin:10px 0;">2/ Системы расчета процента</h2>
                     <p style="color:#000; font-size:14px;">
                       У меня есть базовый оклад 30000 рублей. Если я выполняю план — ставка одна, перевыполняю — ставка
@@ -397,7 +341,7 @@
                 <!-- Блок 2 -->
                 <tr>
                   <td style="width:50%; padding:10px;" valign="top">
-                    <h1>💰</h1>
+                    <h1 style="padding-top: 10px;">💰</h1>
                     <h2 style="margin:10px 0;">3/ Прямой процент без оклада</h2>
                     <p style="color:#000; font-size:14px;">
                       Можно получать приличные деньги, когда рынок на подъёме и трафик большой. А если трафик снизился,
@@ -411,7 +355,7 @@
                   </td>
 
                   <td style="width:50%; padding:10px;" valign="top">
-                    <h1>⌛</h1>
+                    <h1 style="padding-top: 10px;">⌛</h1>
                     <h2 style="margin:10px 0;">4/ Почасовая оплата</h2>
                     <p style="color:#000; font-size:14px;">
                       Вроде бы все просто: пришёл, отметился, провёл смену. Однако я понимаю, что меня мотивируют не на
@@ -428,7 +372,7 @@
                 <!-- Блок 3 -->
                 <tr>
                   <td colspan="2" align="left" style="padding:10px;">
-                    <h1>🕺</h1>
+                    <h1 style="padding-top: 10px;">🕺</h1>
                     <h2 style="margin:10px 0;">5/ Централизованное выполнение плана</h2>
                     <p style="color:#000; font-size:14px;">
                       Коллективная ответственность, это мы тоже проходили. Выполнили план — всем хорошо. Не выполнили —
@@ -447,7 +391,7 @@
             </td>
           </tr>
 
-          <table style="background:#fff; padding: 50px 0 25px;" width="100%" align="center" cellspacing="0"
+          <table style="background:#fff; padding: 20px 0 25px;" width="100%" align="center" cellspacing="0"
             cellpadding="0">
             <tr>
               <td width="20%" align="right" valign="middle">
