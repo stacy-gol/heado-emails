@@ -80,6 +80,44 @@ document.addEventListener('click', function(e) {
             }
         }
     }
+    //https://moto.heado.ru/dashboards page forms
+    if (window.location.href === 'https://moto.heado.ru/dashboards') {
+        if (e.target.matches('#form980178136 button')) {
+            var form = getClosest(e.target, 'form'),
+                name = form.querySelector('[name="Name"]').value.trim(),
+                email = form.querySelector('[name="Email"]').value.trim(),
+                phone = form.querySelector('[type="tel"]').value.trim();
+
+            var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            var phonePattern = /^\(\d{3}\) \d{3}-\d{2}-\d{2}$/;
+
+            if (name && emailPattern.test(email) && phonePattern.test(phone)) {
+                console.log('Форма трекера заполнена корректно');
+                console.log(name, email, phone);
+                ym(98768665,'reachGoal','dashboard')
+            }
+        }
+    }
 });
+document.addEventListener('click', function(e) {
+    const goals = {
+        '#rec978823486 a': { log: 'Клик конверсия', goal: 'konversiya' },
+        '#rec900151813 a': { log: 'Клик выручка', goal: 'vyruchka' },
+        '#rec978809901 a': { log: 'Клик средний чек', goal: 'srednyi check' },
+        '#rec978849616 a': { log: 'Клик количество товаров в чеке', goal: 'tovary' },
+        '#rec978766871 a': { log: 'Клик Количество продаж/чеков', goal: 'kolichestvo checkov' },
+        '#rec978882681 a': { log: 'Клик Допродажи высокомаржинальных товаров', goal: 'VMT' },
+    };
+
+    for (let selector in goals) {
+        if (e.target.matches(selector)) {
+            console.log(goals[selector].log);
+            ym(98768665, 'reachGoal', goals[selector].goal);
+            break;
+        }
+    }
+});
+
+
 </script>
 <!-- Form submit goal to Yandex Metrica -->
